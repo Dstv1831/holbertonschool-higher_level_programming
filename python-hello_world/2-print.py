@@ -4,4 +4,4 @@
 This script demonstrates a simple print statement in Python.
 """
 
-print('"Programing is like building a multilingual puzzle')
+print('"Programming is like building a multilingual puzzle')
