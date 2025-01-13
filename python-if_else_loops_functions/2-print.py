@@ -1,7 +1,16 @@
 #!/usr/bin/python3
+import random
 
-"""
-This script demonstrates a simple print statement in Python.
-"""
+def printing(n, text):
+    print(f"{n} {text}")
 
-print('"Programming is like building a multilingual puzzle')
+
+number = random.randint(-10, 10)
+if number > 0:
+    text = "is positive"
+elif number < 0:
+    text = "is negative"
+else:
+    text = "is zero"
+printing(number, text)
+    
