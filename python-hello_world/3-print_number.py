@@ -3,5 +3,5 @@
 """
 This script demonstrates a simple print statement in Python.
 """
-number = 98
-print(f"{number} Battery street")
+NUMBER = 98
+print(f"{NUMBER} Battery street")
