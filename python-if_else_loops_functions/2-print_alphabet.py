@@ -1,2 +1,3 @@
-#!/usr/bin/python3
-print(''.join("{0}".format(chr(n)) for n in range(ord('a'), ord('z') + 1)), end = "")
+#!/usr/bin/python
+for n in range (ord('a'),ord('z') + 1):
+    print("{0}".format(chr(n)), end='')
