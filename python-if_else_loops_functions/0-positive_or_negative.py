@@ -14,4 +14,3 @@ elif number < 0:
 else:
     text = "is zero"
 printing(number, text)
-    
