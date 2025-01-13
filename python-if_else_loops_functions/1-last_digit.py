@@ -7,7 +7,11 @@ def printing(n, ld, txt):
 
 
 number = random.randint(-10000, 10000)
-ld = abs(number) % 10
+
+if number > 0:
+    ld = number % 10
+else:
+    ld = abs(number) % 10 *-1
 # YOUR CODE HERE
 if ld > 5:
     text = "and is greater than 5"
