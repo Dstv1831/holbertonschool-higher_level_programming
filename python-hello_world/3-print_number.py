@@ -4,4 +4,4 @@
 This script demonstrates a simple print statement in Python.
 """
 number = 98
-print(f"{number} Battery Street")
+print(f"{number} Battery Street\n")
