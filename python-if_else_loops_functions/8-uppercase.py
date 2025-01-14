@@ -10,5 +10,3 @@ def uppercase(str):
             i = chr(asci - 32)
         print("{0}".format(i), end = '')
     print()
-
-uppercase("max rocks")
