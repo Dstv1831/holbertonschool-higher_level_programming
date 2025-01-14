@@ -9,7 +9,7 @@ if num == 0:
 elif num == 1:
     print("1 argument:")
 else:
-    print("{0} arguments:". format(num))
+    print("{} arguments:". format(num))
 
 for i in range (num):
-    print("{0}: {1}". format(i, sys.argv[i]))
+    print("{}: {}". format(i, sys.argv[i + 1]))
