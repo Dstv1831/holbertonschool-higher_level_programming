@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    import args
+    import 2-args as args
 
 num = len(args.argv)
 if num == 0:
