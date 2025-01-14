@@ -5,8 +5,8 @@ def uppercase(str):
     for i in str:
         asci = ord(i)
         if 96 < asci < 123:
-            new_char = chr(asci - 32)
-            print("{0}".format(new_char), end = '')
-        else:
-            print("{0}".format(i), end = '')
+            i = chr(asci - 32)
+        print("{0}".format(i), end = '')
+    print("{0}".format(i))
 
+uppercase('Best School 98 battery')
