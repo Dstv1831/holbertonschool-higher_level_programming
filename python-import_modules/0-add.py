@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-import add_0.py as addition
+if __name__ == "__main__":
+    from add_0 import add as addition
+
 
 a = 1
 b = 2
