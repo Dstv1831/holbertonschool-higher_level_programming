@@ -2,9 +2,10 @@
 
 """ Write a function that checks for lowercase character."""
 
+
 def islower(c):
     if 96 < ord(c) < 123:
-        return(True)
+        return (True)
     else:
-        return(False)
+        return (False)
 
