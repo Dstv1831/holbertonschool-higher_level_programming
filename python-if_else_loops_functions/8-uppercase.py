@@ -8,5 +8,4 @@ def uppercase(str):
             i = chr(asci - 32)
         print("{0}".format(i), end = '')
     print("{0}".format(i))
-
-uppercase('Best School 98 battery')
+    
