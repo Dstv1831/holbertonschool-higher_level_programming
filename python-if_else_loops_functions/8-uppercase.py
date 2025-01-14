@@ -5,8 +5,9 @@ def uppercase(str):
     """ Write a function that prints a string in uppercase followed by a new line. """
     
     for i in str:
-        asci = ord(i)
-        if (96 < asci and asci < 123):
-            i = chr(asci - 32)
+        if (96 < ord(i) and ord(i) < 123):
+            i = chr(ord(i) - 32)
         print('{0}'.format(i), end="")
     print("")
+
+uppercase("Max rocks")
