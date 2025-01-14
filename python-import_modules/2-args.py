@@ -11,5 +11,5 @@ elif num == 1:
 else:
     print("{} arguments:". format(num))
 
-for i in range (num):
+for i in range(num):
     print("{}: {}". format(i + 1, sys.argv[i + 1]))
