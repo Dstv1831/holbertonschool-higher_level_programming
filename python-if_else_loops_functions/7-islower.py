@@ -3,7 +3,8 @@
 """ Write a function that checks for lowercase character."""
 
 def islower(c):
-    if 60 < ord(c) < 123:
+    if 97 < ord(c) < 123:
         return (True)
     else:
         return (False)
+
