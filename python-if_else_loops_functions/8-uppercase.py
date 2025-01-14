@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def uppercase(s):
     """makes all characters in a string uppercase."""
     for c in s:
