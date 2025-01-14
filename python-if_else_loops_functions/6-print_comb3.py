@@ -5,7 +5,7 @@ while u < 8:
     for d in range(0,10):
         if u == d or u > d :
             continue
-        print(f"{u}{d}, ", end="")
+        print("{0}{1}, ".format(u, d), end="")
     u += 1
-print(f"{u}{d}")
+print("{0}{1}, ".format(u, d), end="")
 
