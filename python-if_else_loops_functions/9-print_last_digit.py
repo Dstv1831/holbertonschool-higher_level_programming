@@ -2,5 +2,5 @@
 
 def print_last_digit(number):
     ld = number % 10
-    print(ld)
+    return(ld)
 
