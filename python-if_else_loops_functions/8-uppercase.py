@@ -9,4 +9,3 @@ def uppercase(str):
         if 96 < asci < 123:
             i = chr(asci - 32)
         print("{0}".format(i), end="")
-    print("")
