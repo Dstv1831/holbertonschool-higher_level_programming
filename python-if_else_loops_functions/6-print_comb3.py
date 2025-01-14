@@ -7,5 +7,5 @@ while u < 8:
             continue
         print("{0}{1}, ".format(u, d), end="")
     u += 1
-print("{0}{1}".format(u, d), end="")
+print("{0}{1}".format(u, d))
 
