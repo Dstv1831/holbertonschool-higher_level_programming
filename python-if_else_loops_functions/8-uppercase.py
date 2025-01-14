@@ -6,7 +6,7 @@ def uppercase(str):
         asci = ord(i)
         if 96 < asci < 123:
             new_char = chr(asci - 32)
-            print(new_char, end = '')
+            print("{0}".format(new_char), end = '')
         else:
-            print(i, end = '')
+            print("{0}".format(i), end = '')
 
