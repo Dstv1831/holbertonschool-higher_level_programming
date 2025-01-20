@@ -7,3 +7,4 @@ def print_matrix_integer(matrix=[[]]):
             print("{:d}".format(value), end='')
             if j != len(row) - 1:
                 print(" ", end='')
+        print()
