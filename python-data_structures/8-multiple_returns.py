@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def multiple_returns(sentence):
-    """Returns a tuple with the length of the string and the first character of it"""
+    """Returns a tuple with the stirng length and its first character"""
     l = len(sentence)
     if l == 0:
         first_char = 'None'
