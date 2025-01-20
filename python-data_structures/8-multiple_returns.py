@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def multiple_return(sentence):
+def multiple_returns(sentence):
     """Functions that returns a tuple with the length of the string and the first character of it"""
     l= len(sentence)
     if l == 0:
