@@ -1,14 +1,20 @@
 #!/usr/bin/python3
 
 def list_division(my_list_1, my_list_2, list_length):
-        result = None
-    try:
-        result = a // b
-        return float(result)
-    except ZeroDivisionError:
-        return "None"
-    finally:
-        if result is None:
-            print("Inside result: {}".format("None"))
-        else:
-            print("Inside result: {:0.1f}".format(result))
+    """divides element by element 2 lists."""
+    new = []
+    for i in range(list_length):
+        div = 0
+        try:
+            div = my_list_1[i]/my_list_2[i]
+            new.append(div)
+        except TypeError:
+            print("wrong type")
+        except ZeroDivisionError:
+            print("division by 0")
+        except IndexError:
+            print("out of range")
+        finally:
+            if not div:
+                new.append(0)
+    return new
