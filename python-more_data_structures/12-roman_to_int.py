@@ -20,5 +20,5 @@ def roman_to_int(roman_string):
                 number += rom_lis[i]
             else:
                 number -= rom_lis[i]
-        number += rom_lis[len(rom_lis)]
+        number += rom_lis[len(rom_lis)-1]
     return number          
