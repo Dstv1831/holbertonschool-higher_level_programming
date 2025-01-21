@@ -18,7 +18,7 @@ def roman_to_int(roman_string):
         for i in range(len(rom_lis) - 1):
             if rom_lis[i] >= rom_lis[i+1]:
                 number += rom_lis[i]
-            else: 
+            else:
                 number -= rom_lis[i]
-        number += rom_lis[i+1]
+        number += rom_lis[len(rom_lis)]
     return number          
