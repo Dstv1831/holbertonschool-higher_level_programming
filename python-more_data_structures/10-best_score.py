@@ -6,6 +6,6 @@ def best_score(a_dictionary):
 
     if len(a_dictionary) != 0:
         max_val = max(a_dictionary.values())
-        return a_dictionary[max_val]
+        return max_val
     else:
         return "none"
