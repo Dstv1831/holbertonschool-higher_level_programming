@@ -10,7 +10,7 @@ def roman_to_int(roman_string):
         "D" : 500,
         "M" : 1000
     }
-    if isinstance(roman_string, str) and roman_string == "None":
+    if not isinstance(roman_string, str) or roman_string == "None":
         return 0
     else:
         rom_lis = [romans[items.upper()] for items in roman_string]
