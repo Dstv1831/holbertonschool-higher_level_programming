@@ -1,4 +1,4 @@
-#!d/usr/bin/python3
+#!/usr/bin/python3
 def roman_to_int(roman_string):
     """Transform Roman numbers into Decimals """
     romans = {
