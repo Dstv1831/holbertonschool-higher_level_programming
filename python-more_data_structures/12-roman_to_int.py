@@ -2,13 +2,13 @@
 def roman_to_int(roman_string):
     """Transform Roman numbers into Decimals """
     romans = {
-        "I" : 1,
-        "V" : 5,
-        "X" : 10,
-        "L" : 50,
-        "C" : 100,
-        "D" : 500,
-        "M" : 1000
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
     }
     if not isinstance(roman_string, str) or roman_string == "None":
         return 0
@@ -21,4 +21,4 @@ def roman_to_int(roman_string):
             else:
                 number -= rom_lis[i]
         number += rom_lis[len(rom_lis)-1]
-    return number          
+    return number
