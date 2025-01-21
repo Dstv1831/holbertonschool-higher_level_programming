@@ -8,4 +8,4 @@ def best_score(a_dictionary):
         max_val = max(a_dictionary.values())
         return max_val
     else:
-        return "none"
+        return "None"
