@@ -5,7 +5,7 @@ def best_score(a_dictionary):
     """Find the highest score in a dcitionary"""
 
     if len(a_dictionary) != 0:
-        max_val = max(a_dictionary.values(), key = a_dictionary.get)
+        max_val = max(a_dictionary.values())
         return a_dictionary[max_val]
     else:
         return "none"
