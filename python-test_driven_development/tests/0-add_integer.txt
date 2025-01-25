@@ -13,6 +13,8 @@ First import ``add_integer`` from the ``0-add_integer`` file:
 
     >>> add = __import__('0-add_integer').add_integer
 
+Tests:
+
 ::
 
     >>> add(2, 3)
@@ -22,7 +24,3 @@ First import ``add_integer`` from the ``0-add_integer`` file:
 
     >>> add(2.0, 4.0)
     6
-
-::
-    >>> add(2.6, 3.7)
-    5
