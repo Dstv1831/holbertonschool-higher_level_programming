@@ -32,8 +32,20 @@ Tests:
 
 ::
 
-    >>> add(float(1.8e309))
+    >>> add(float(1.8e309), 2)
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
-    
+
+::
+
+    >>> add(float(NaN), 5)
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+::
+
+    >>> add(5)
+    103
+
+
 
