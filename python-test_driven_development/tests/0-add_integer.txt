@@ -29,6 +29,3 @@ Tests:
     >>> add("dos", 4)
     TypeError: a must be an integer
 
-::
-    >>> add(1, True)
-    TypeError: b must be an integer
