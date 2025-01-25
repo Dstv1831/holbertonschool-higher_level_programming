@@ -38,7 +38,7 @@ Tests:
 
 ::
 
-    >>> add(float(NaN), 5)
+    >>> add(float('nan'), 5)
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
 
