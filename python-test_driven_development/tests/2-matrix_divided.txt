@@ -26,5 +26,4 @@ Tests:
     >>> matrix = [[1, 2, 3], [4, 5, 6]]
     >>> print(mat_div(matrix, "tres"))
     Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-
+    TypeError: div must be a number
