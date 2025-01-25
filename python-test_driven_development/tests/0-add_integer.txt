@@ -9,9 +9,12 @@ Usage
 
 returns the addition of its two arguments.
 
+First import ``add_integer`` from the ``0-add_integer`` file:
+
+    >>> add = __import__('0-add_integer').add_integer
+
 ::
 
-    >>> add_integer = __import__('0-add_integer').add_integer
     >>> add_integer(2, 3)
     5
 
@@ -19,3 +22,7 @@ returns the addition of its two arguments.
 
     >>> add_integer(2.0, 4.0)
     6
+
+::
+    >>> add_integer(2.6, 3.7)
+    5
