@@ -37,10 +37,4 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     """ The lambda method is necessary to keep the return a matrix structure"""
-    return ([list(map(lambda x: round(x/2, 2), row)) for row in matrix])
-
-matrix1 = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-matrix_divided(matrix1,3)
+    return ([list(map(lambda x: round(x/div, 2), row)) for row in matrix])
