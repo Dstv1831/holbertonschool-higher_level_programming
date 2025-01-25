@@ -26,5 +26,5 @@ Tests:
     6
 
 ::
-    >>> add(dos, 4)
+    >>> add("dos", 4)
     a must be an integer
