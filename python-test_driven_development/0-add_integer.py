@@ -8,8 +8,6 @@ This module provides a function to add two integers or float
 """
 
 def add_integer(a, b=98):
-
-
     """ 
     Return the integer addition of a and b.
     Float arguments are casted int integers.
