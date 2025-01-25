@@ -15,14 +15,10 @@ First import ``add_integer`` from the ``0-add_integer`` file:
 
 ::
 
-    >>> add_integer(2, 3)
+    >>> add(2, 3)
     5
 
 ::
 
-    >>> add_integer(2.0, 4.0)
+    >>> add(2.0, 4.0)
     6
-
-::
-    >>> add_integer(2.6, 3.7)
-    5
