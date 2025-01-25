@@ -32,6 +32,8 @@ Tests:
 
 ::
 
-    >>> add(2.5, 4.2)
-    6
+    >>> add(float(1.8e309))
+    Traceback (most recent call last):
+    OverflowError: cannot convert that float into an integer
+    
 
