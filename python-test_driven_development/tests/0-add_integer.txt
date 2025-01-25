@@ -9,7 +9,7 @@ Usage
 
 returns the addition of its two arguments.
 
-First import ``add_integer`` from the ``0-add_integer`` file:
+First import ``add_integer`` from the ``0-add_integer.py`` file:
 
     >>> add = __import__('0-add_integer').add_integer
 
