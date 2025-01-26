@@ -20,4 +20,24 @@ Tests:
     >>> my_name("David", "Tangarife")
     My name is David Tangarife
 
+::
+
+    >>> my_name("David", 28)
+    Traceback(most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+    >>> my_name(True, "David")
+    Traceback(most recent call last):
+    TypeError: first_name must be a string
+
+::  
+
+    >>> my_name()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'first_name' 'last_name'
+
+
+
 
