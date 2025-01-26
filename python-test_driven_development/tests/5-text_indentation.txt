@@ -27,3 +27,9 @@ Tests:
     >>> txt_ind(4)
     Traceback (most recent call last):
     TypeError: text must be a string
+
+::
+
+    >>> txt_ind(" ")
+    Traceback (most recent call last):
+    TypeError: text must be a string
