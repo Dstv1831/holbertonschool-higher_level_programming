@@ -7,10 +7,18 @@ This module provides a function that prints a square of the size of its argument
 Usage
 -----
 
-returns a new matrix with each element being the division by "div" of each element of the original matrix.
+Prints a square with dimensions 'size'.
 
-First import ``say_my_name`` from the ``3-say_my_name.py`` file:
+First import ``print_square`` from the ``4-print_square.py`` file:
 
-    >>> my_name = __import__('3-say_my_name').say_my_name
+    >>> my_square = __import__('4-print_square').print_square
 
 Tests:
+
+::
+
+    >>>my_square(4)
+    ####
+    ####
+    ####
+    ####
