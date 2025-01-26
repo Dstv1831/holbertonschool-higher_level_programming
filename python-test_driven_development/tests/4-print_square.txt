@@ -17,7 +17,7 @@ Tests:
 
 ::
 
-    >>>my_square(4)
+    >>> my_square(4)
     ####
     ####
     ####
