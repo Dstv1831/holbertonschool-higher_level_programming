@@ -20,9 +20,9 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     while(i < len(text)):
-        if text[i] != '.' and text[i] != '?' and text[i] !=':':
-            print(text[i], end='')
+        if text[i] == '.' and text[i] == '?' and text[i] ==':':
+            print('\n')
         else:
             print(text[i], end='')
-            print('\n')
+            
         i += 1
