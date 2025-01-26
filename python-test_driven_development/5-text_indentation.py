@@ -23,7 +23,8 @@ def text_indentation(text):
         if text[i] != '.' and text[i] != '?' and text[i] !=':':
             print(text[i], end='')
         else:
-            print(text[i])
+            print(text[i], end='')
+            print('\n')
         i += 1
 
 text_indentation("Holberton.School")
