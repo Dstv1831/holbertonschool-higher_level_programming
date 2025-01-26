@@ -37,6 +37,6 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not (matrix or div):
-        raise ValueError("Missing 1 or 2 arguments")
+        raise TypeError("Missing 1 require positional argument")
     """ The lambda method is necessary to keep the return a matrix structure"""
     return ([list(map(lambda x: round(x/div, 2), row)) for row in matrix])

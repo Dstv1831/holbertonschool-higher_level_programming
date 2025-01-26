@@ -60,7 +60,7 @@ Tests:
     >>> matrix = [[1, 2, 3], [2, 3, 2]]
     >>> print(mat_div(matrix))
     Traceback (most recent call last):
-    ValueError: Missing 1 or 2 arguments
+    TypeError: mat_div() missing 1 required positional argument
 
 ::
     
