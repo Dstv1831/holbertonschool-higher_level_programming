@@ -23,7 +23,7 @@ Tests:
 ::
 
     >>> my_name("David", 28)
-    Traceback(most recent call last):
+    Traceback (most recent call last):
     TypeError: last_name must be a string
 
 
