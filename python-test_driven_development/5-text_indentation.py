@@ -26,5 +26,3 @@ def text_indentation(text):
             print(text[i], end='')
             print('\n')
         i += 1
-
-text_indentation("Holberton.School")
