@@ -3,7 +3,8 @@
 """
 4-print_square.py
 
-This module provides a function that prints a square of the size of its argument
+This module provides a function that prints a square 
+of the size of its argument
 
 """
 
