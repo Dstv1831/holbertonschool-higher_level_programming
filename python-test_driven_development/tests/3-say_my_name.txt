@@ -17,7 +17,7 @@ Tests:
 
 ::
 
-    >>>my_name("David", "Tangarife")
+    >>> my_name("David", "Tangarife")
     My name is David Tangarife
 
 
