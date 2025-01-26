@@ -19,12 +19,12 @@ def text_indentation(text):
     i = 0
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    while(i < len(text)):
+    while i < len(text):
         if text[i] in '.?:':
             print(text[i], end='')
             print('\n')
+            while (i + 1 < len(text) and text[i + 1] == ' '):
+                i += 1
         else:
             print(text[i], end='')
-        while (i + 1 < len(text) and text[i + 1] == ' '):
-            i += 1
         i += 1
