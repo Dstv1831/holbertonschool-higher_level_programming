@@ -32,13 +32,13 @@ class TestMaxInteger(unittest.TestCase):
      
      def test_one_element(self):
           """Test a list with only one element"""
-          max_one = [90]
-          self.assertEqual(max_integer(max_one), 45)
+          max_one = [120]
+          self.assertEqual(max_integer(max_one), 120)
 
      def test_empty(self):
           """Test a list with no elements"""
           max_one = []
-          self.assertEqual(max_integer(max_one), 0)
+          self.assertEqual(max_integer(max_one), None)
           
      if __name__ == '__main__':
           unittest.main()
