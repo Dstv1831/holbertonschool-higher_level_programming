@@ -52,7 +52,7 @@ Tests:
 ::
     
     >>> matrix = [[0, 0, 0], [0, 0, 0]]
-    >>> print(mat_div(matrix, 3))
+    >>> print(mat_div(matrix, float('inf')))
     [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
     
 
