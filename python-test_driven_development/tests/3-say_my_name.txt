@@ -36,7 +36,7 @@ Tests:
 
     >>> my_name()
     Traceback (most recent call last):
-    TypeError: say_my_name() missing 2 required positional arguments: 'first_name' 'last_name
+    TypeError: say_my_name() missing 1 required positional arguments: 'first_name'
 
 
 
