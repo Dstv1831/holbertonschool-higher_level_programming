@@ -9,8 +9,6 @@ class TestMaxInteger(unittest.TestCase):
           """Test a list with a max value in the last element"""
           max_at_end = [1, 2, 3, 4]
           self.assertEqual(max_integer(max_at_end), 4)
-
-
-
-if __name__ == '__main__':
-    unittest.main()
+          
+     if __name__ == '__main__':
+          unittest.main()
