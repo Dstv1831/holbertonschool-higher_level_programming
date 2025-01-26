@@ -22,3 +22,22 @@ Tests:
     ####
     ####
     ####
+
+::
+
+    >>> my_square("cuatro")
+    traceback (most recent call last)
+    TypeError: size must be an integer
+
+::
+
+    >>> my_square("-1")
+    traceback (most recent call last)
+    ValueError: size must be >= 0
+
+::
+
+    >>> my_square()
+    traceback (most recent call last)
+    TypeError: print_square() missing i require positional argument: 'size'
+
