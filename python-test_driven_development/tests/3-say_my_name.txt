@@ -1,3 +1,23 @@
+===========================
+How to use 3-say_my_name.py
+===========================
 
+This module provides a function to print the first_name and last_name arguments.
+
+Usage
+-----
+
+returns a new matrix with each element being the division by "div" of each element of the original matrix.
+
+First import ``say_my_name`` from the ``3-say_my_name.py`` file:
+
+    >>> my_name = __import__('3-say_my_name').say_my_name
+
+Tests:
+
+::
+
+    >>>my_name("David", "Tangarife")
+    My name is David Tangarife
 
 

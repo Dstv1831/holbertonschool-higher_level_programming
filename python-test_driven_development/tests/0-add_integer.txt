@@ -7,9 +7,9 @@ This module defines an integer addition function "add_integer(a, b=98)".
 Usage
 -----
 
-returns the addition of its two arguments.
+Prints a sentence with both arguments firs_name and last name.
 
-First import ``add_integer`` from the ``0-add_integer.py`` file:
+First import ```` from the ``0-add_integer.py`` file:
 
     >>> add = __import__('0-add_integer').add_integer
 
