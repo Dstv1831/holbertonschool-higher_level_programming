@@ -2,13 +2,28 @@
 How to use 5-text_indentation.py
 ===========================
 
-This module provides a function that prints a square of the size of its argument
+This module provides a function that prints a text
+with two new lines after encountering the characters:
+":", ".", "?"
 
 Usage
 -----
 
-Prints a square with dimensions 'size'.
+Prints a text with a new line indented if any of the characters ":", ".", "?" is found
 
-First import ``print_square`` from the ``4-print_square.py`` file:
+First import ``text_indentation`` from the ``5-text_indentation.py`` file:
 
-    >>> my_square = __import__('4-print_square').print_square
+    >>> txt_ind = __import__('5-text_indentation').text_indentation
+
+Tests:
+
+::
+
+    >>> txt_ind("David Santiago")
+    David Santiago
+
+::
+
+    >>> txt_ind(4)
+    Traceback (most recent call last):
+    TypeError: text must be a string
