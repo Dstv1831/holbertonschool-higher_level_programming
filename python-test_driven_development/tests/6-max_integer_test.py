@@ -20,20 +20,20 @@ class TestMaxInteger(unittest.TestCase):
           max_middle = [1, 2, 5, 4, 3]
           self.assertEqual(max_integer(max_middle), 5)
      
-     # def test_max_at_the_end(self):
-     #      """Test a list with a max value in the last element"""
-     #      max_at_end = [1, 2, 3, 4]
-     #      self.assertEqual(max_integer(max_at_end), 4)
+     def test_negative_number(self):
+          """Test a list with a mnegative value number"""
+          max_negative = [1, 2, -3, 4, -5]
+          self.assertEqual(max_integer(max_negative), 4)
      
-     # def test_max_at_the_end(self):
-     #      """Test a list with a max value in the last element"""
-     #      max_at_end = [1, 2, 3, 4]
-     #      self.assertEqual(max_integer(max_at_end), 4)
+     def test_only_negative(self):
+          """Test a list with a max value in the last element"""
+          max_only_negative = [-8, -3, -2, -1, -5]
+          self.assertEqual(max_integer(max_only_negative), -1)
      
-     # def test_max_at_the_end(self):
-     #      """Test a list with a max value in the last element"""
-     #      max_at_end = [1, 2, 3, 4]
-     #      self.assertEqual(max_integer(max_at_end), 4)
+     def test_one_element(self):
+          """Test a list with a max value in the last element"""
+          max_one = [45]
+          self.assertEqual(max_integer(max_one), 45)
           
      if __name__ == '__main__':
           unittest.main()
