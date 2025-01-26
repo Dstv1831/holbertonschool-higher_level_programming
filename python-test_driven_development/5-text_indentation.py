@@ -25,5 +25,6 @@ def text_indentation(text):
             print('\n')
         else:
             print(text[i], end='')
-            
+        while (i + 1 < len(text) and text[i + 1] == ' '):
+            i += 1
         i += 1
