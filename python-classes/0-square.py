@@ -2,13 +2,8 @@
 
 """
 0-square
-
-This module provides a class with an empty Square
-
+This module contains the empty class square
 """
-
-class square():
-
-    """ Empty class that defines a square """
+class Square:
+    """This is a square"""
     pass
-
