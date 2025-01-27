@@ -8,8 +8,8 @@ This module contains the  class square
 
 class Square:
     """
-    class square 
-    
+    class square
+
     attributes:
         size:
     """
