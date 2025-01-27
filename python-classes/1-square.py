@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 
-class square():
+"""
+0-square
+This module contains the  class square
+"""
 
+
+class Square:
     """
-    Class that defines a square
-
-    Attributes:
-        size: private instance 
+    class square 
     
+    attributes:
+        size:
     """
-
-    def __init__(self, heigh):
-        self.height = heigh
-
-    @property
-    def height(self):
-        return self.__height
+    def __init__(self, size):
+        """Private instance attribue"""
+        self.__size = size
