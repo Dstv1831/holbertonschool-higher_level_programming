@@ -27,7 +27,6 @@ class Square:
             self.__size = size
 
         if (not isinstance(position, tuple) or 
-            not (position[1]) or
             not all(isinstance(coord, int) for coord in position) or 
             not all((coord >= 0) for coord in position)):
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -61,7 +60,6 @@ class Square:
     def position(self, coordinates):
         """Decorator for a setter to adjust the value of the position attribute"""
         if (not isinstance(coordinates, tuple) or 
-            not (coordinates[1]) or
             not all(isinstance(coord, int) for coord in coordinates) or 
             not all((coord >= 0) for coord in coordinates)):
             raise TypeError("position must be a tuple of 2 positive integers")
