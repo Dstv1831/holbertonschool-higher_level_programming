@@ -28,11 +28,6 @@ class Square:
         """Decorator for a getter size"""
         return self.__size
     
-    @property
-    def position(self):
-        """Decorator for a getter position"""
-        return self.__position
-
     @size.setter
     def size(self, value):
         """Decorator for a setter to adjust the value of the size attribute"""
@@ -42,11 +37,17 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+    
+    @property
+    def position(self):
+        """Decorator for a getter position"""
+        return self.__position
 
     @position.setter
     def position(self, coordinates):
         """Decorator for a setter to adjust the value of the position attribute"""
         if (not isinstance(coordinates, tuple) or 
+            len(coordinates != 2) or
             not all(isinstance(coord, int) for coord in coordinates) or 
             not all((coord >= 0) for coord in coordinates)):
             raise TypeError("position must be a tuple of 2 positive integers")
