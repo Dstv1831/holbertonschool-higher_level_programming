@@ -45,7 +45,7 @@ class Square:
 
     @position.setter
     def position(self, coordinates):
-        """Decorator for a setter to adjust the value 
+        """Decorator for a setter to adjust the value
         of the position attribute"""
         if (not isinstance(coordinates, tuple) or
             len(coordinates) != 2 or
