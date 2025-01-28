@@ -13,7 +13,7 @@ class Square:
     attributes:
         size (int): The size of the new square.
         position (int, int): The position of the new square.
-    
+
     methods:
         area: Calculates the area of the square
         my_print: Prints the square in the stdout
@@ -27,7 +27,7 @@ class Square:
     def size(self):
         """Decorator for a getter size"""
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """Decorator for a setter to adjust the value of the size attribute"""
@@ -37,7 +37,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
-    
+
     @property
     def position(self):
         """Decorator for a getter position"""
@@ -45,10 +45,11 @@ class Square:
 
     @position.setter
     def position(self, coordinates):
-        """Decorator for a setter to adjust the value of the position attribute"""
-        if (not isinstance(coordinates, tuple) or 
+        """Decorator for a setter to adjust the value 
+        of the position attribute"""
+        if (not isinstance(coordinates, tuple) or
             len(coordinates) != 2 or
-            not all(isinstance(coord, int) for coord in coordinates) or 
+            not all(isinstance(coord, int) for coord in coordinates) or
             not all((coord >= 0) for coord in coordinates)):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
@@ -64,7 +65,7 @@ class Square:
             print()
         else:
             for y in range(self.__position[1]):
-                    print()
+                print()
             for i in range(self.__size):
                 for x in range(self.__position[0]):
                     print(' ', end="")
