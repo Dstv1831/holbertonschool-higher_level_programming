@@ -25,12 +25,12 @@ class Square:
     def area(self):
         """Public instance method that calculates the area"""
         return pow(self.__size, 2)
-    
+
     """Decorator for a getter"""
     @property
     def size(self):
         return self.__size
-    
+
     """Decorator for a setter to adjust the value of an attribute"""
     @size.setter
     def size(self, value):
