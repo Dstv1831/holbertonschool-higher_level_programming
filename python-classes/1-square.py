@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-0-square
-This module contains the  class square
+1-square
+This module contains the class square
 """
 
 

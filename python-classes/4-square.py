@@ -8,10 +8,13 @@ This module contains the  class square
 
 class Square:
     """
-    class square
+    class square with decorators getter and setter
 
     attributes:
-        size:
+        size: size of the square
+    
+    methods:
+        area: Calculates the area of the square
     """
     def __init__(self, size=0):
         """Private instance attribue with optional size value initialized """

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-0-square
-This module contains the  class square
+4-square
+This module contains the class square
 """
 
 
@@ -11,7 +11,7 @@ class Square:
     class square
 
     attributes:
-        size:
+        size: size of the square
     """
     def __init__(self, size=0):
         """Private instance attribue with optional size value initialized """
