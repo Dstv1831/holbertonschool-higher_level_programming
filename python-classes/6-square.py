@@ -48,11 +48,10 @@ class Square:
         """Decorator for a setter to adjust the value
         of the position attribute"""
 
-        if (not isinstance(coordinates, tuple) or
-            len(coordinates) != 2 or
-            not all(isinstance(coord, int) for coord in coordinates) or
-            not all((coord >= 0) for coord in coordinates)
-        ):
+        if (not isinstance(coordinates, tuple)
+            or len(coordinates) != 2
+            or not all(isinstance(coord, int) for coord in coordinates)
+            or not all((coord >= 0) for coord in coordinates)):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = coordinates
