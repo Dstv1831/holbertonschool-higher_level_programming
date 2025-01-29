@@ -7,7 +7,7 @@ This module contains the empty class rectangle
 
 class Rectangle:
     """
-    Empty class that creates a rectangle 
+    Empty class that creates a rectangle
 
     attirbutes:
         private instance width
@@ -38,7 +38,7 @@ class Rectangle:
     def height(self):
         """Getter decorator"""
         return self.__height
-       
+
     @height.setter
     def height(self, h):
         """Setter decorator"""
