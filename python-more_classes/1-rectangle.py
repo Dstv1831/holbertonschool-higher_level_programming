@@ -8,22 +8,23 @@ This module contains the empty class rectangle
 class Rectangle:
     """
     Empty class that creates a rectangle 
-    
+
     attirbutes:
         private instance width
         private instance heigh
+        instantion with optional values
 
     """
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        
+
     @property
     def width(self):
         """Getter decorator"""
         return self.__width
-    
+
     @width.setter
     def width(self, w):
         """Setter decorator"""
@@ -32,12 +33,12 @@ class Rectangle:
         elif w < 0:
             raise ValueError("width must be >= 0")
         self.__width = w
-    
+
     @property
     def height(self):
         """Getter decorator"""
         return self.__height
-        
+       
     @height.setter
     def height(self, h):
         """Setter decorator"""
