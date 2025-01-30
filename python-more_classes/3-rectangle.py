@@ -56,13 +56,13 @@ class Rectangle:
         """Public method that return the area"""
         if self.width == 0 or self.height == 0:
             return 0
-        return ((self.height + self.width) * 2)
-    
+        return ((self.height + self.width) * 2)    
+
     def __str__(self):
         """Print the rectangle by using the method str  """
         if self.width == 0 or self.height == 0:
             return ("")
         rect = []
-        for i in range (self.height):
+        for i in range(self.height):
             [rect.append("#" * self.width)]
         return ("\n".join(rect))
