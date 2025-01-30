@@ -62,7 +62,7 @@ class Rectangle:
         """Print the rectangle by using the method str  """
         if self.width == 0 or self.height == 0:
             return ("")
-        for i in range (self.width):
-            for j in range (self.height):
-                print("#", end="")
-            print()
+        rect = []
+        for i in range (self.height):
+            [rect.append("#" * self.width)]
+        return ("\n".join(rect))
