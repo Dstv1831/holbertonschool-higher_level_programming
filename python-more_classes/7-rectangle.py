@@ -67,7 +67,7 @@ class Rectangle:
             return ("")
         rect = []
         for i in range(self.height):
-            [rect.append(Rectangle.print_symbol * self.width)]
+            [rect.append(self.print_symbol * self.width)]
         return ("\n".join(rect))
 
     def __repr__(self):
@@ -80,3 +80,4 @@ class Rectangle:
         """Delete the rectangle instance """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+        
