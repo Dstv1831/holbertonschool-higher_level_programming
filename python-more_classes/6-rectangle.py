@@ -15,12 +15,12 @@ class Rectangle:
         instantion with optional values
 
     """
-    amount = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        self.amount += 1
+        self.number_of_instances += 1
 
     @property
     def width(self):
@@ -77,7 +77,5 @@ class Rectangle:
 
     def __del__(self):
         """Delete the rectangle instance """
-        self.amount -= 1
+        self.number_of_instances -= 1
         print("Bye rectangle...")
-
-    
