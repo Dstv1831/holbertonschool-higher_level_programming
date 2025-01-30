@@ -72,6 +72,6 @@ class Rectangle:
         string = repr(f"Rectangle({self.width}, {self.height})")
         string = eval(string)
         return string
-    
+
     def __del__(self):
         print("Bye rectangle...")
