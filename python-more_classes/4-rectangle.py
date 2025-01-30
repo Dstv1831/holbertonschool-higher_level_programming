@@ -66,7 +66,7 @@ class Rectangle:
         for i in range(self.height):
             [rect.append("#" * self.width)]
         return ("\n".join(rect))
-    
+
     def __repr__(self):
         """Print the string representation of a new instance"""
         string = repr(f"Rectangle({self.width}, {self.height})")
