@@ -69,5 +69,5 @@ class Rectangle:
     
     def __repr__(self):
         """Print the string representation of a new instance"""
-        string = eval(Rectangle(self.width, self.height))
+        string = eval(f"Rectangle({self.width}, {self.height}")
         return string
