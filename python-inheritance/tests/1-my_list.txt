@@ -56,7 +56,7 @@ Tests:
     >>> my_list.append("R")
     >>> my_list.append("O")
     >>> my_list.print_sorted()
-    ["A","M","O","R","X"]
+    ['A', 'M', 'O', 'R', 'X']
 
 
     
