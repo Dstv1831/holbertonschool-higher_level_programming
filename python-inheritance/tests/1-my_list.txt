@@ -2,22 +2,31 @@
 How to use 1-my_list.py
 ===========================
 
-This module defines an integer addition function "add_integer(a, b=98)".
+This module defines a class My_List that inherists form the class list.
 
 Usage
 -----
 
-Prints a sentence with both arguments firs_name and last name.
+Returns an ascending sorted list.
 
-First import ```` from the ``0-add_integer.py`` file:
+First import ``My_List`` from the ``1-my_list.py`` file:
 
-    >>> add = __import__('0-add_integer').add_integer
+    >>> add = __import__('1-my_list').My_List
 
 Tests:
 
 ::
 
-    >>> add(2, 3)
+    >>> MyList = __import__('1-my_list').MyList
+    my_list = MyList()
+    my_list.append(1)
+    my_list.append(4)
+    my_list.append(2)
+    my_list.append(3)
+    my_list.append(5)
+    print(my_list)
+    my_list.print_sorted()
+    print(my_list)
     5
 
 ::
