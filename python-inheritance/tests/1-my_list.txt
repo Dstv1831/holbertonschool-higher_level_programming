@@ -1,0 +1,48 @@
+===========================
+How to use 1-my_list.py
+===========================
+
+This module defines an integer addition function "add_integer(a, b=98)".
+
+Usage
+-----
+
+Prints a sentence with both arguments firs_name and last name.
+
+First import ```` from the ``0-add_integer.py`` file:
+
+    >>> add = __import__('0-add_integer').add_integer
+
+Tests:
+
+::
+
+    >>> add(2, 3)
+    5
+
+::
+
+    >>> add(2.0, 4.0)
+    6
+
+::
+    >>> add("hello", 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+
+    >>> add(float(1.8e309), 2)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+::
+
+    >>> add(float('nan'), 5)
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+::
+
+    >>> add(5)
+    103
