@@ -10,7 +10,7 @@ def inherits_from(obj, a_class):
     is exactly an instance of the specified class;
     otherwise False."""
 
-    if issubclass(obj.__class__, a_class):
-        return True
-    else:
+    if not issubclass(obj.__name__, a_class):
         return False
+    else:
+        return True
