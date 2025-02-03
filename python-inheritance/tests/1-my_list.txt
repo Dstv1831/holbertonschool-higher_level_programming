@@ -50,7 +50,7 @@ Tests:
 
 ::
     >>> my_list = MyList()
-    >>> my_list.isinstance(my_list, list)
+    >>> if isinstance(my_list, list)
     True
 
 
