@@ -11,7 +11,7 @@ Returns an ascending sorted list.
 
 First import ``My_List`` from the ``1-my_list.py`` file:
 
-    >>> add = __import__('1-my_list').My_List
+    >>> add = __import__('1-my_list').MyList
 
 Tests:
 
