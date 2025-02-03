@@ -5,4 +5,4 @@
 def lookup(obj):
     """Function that returns a list of all
     available attirbutes and methods of an object"""
-    return (obj.__dir__())
+    return list((dir(obj)))
