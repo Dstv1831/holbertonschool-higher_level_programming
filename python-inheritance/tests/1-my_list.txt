@@ -16,6 +16,7 @@ First import ``My_List`` from the ``1-my_list.py`` file:
 Tests:
 
 ::
+    
     >>> my_list = MyList()
     >>> my_list.append(1)
     >>> my_list.append(4)
@@ -28,6 +29,7 @@ Tests:
     [1, 2, 3, 4, 5]
 
 ::
+
     >>> my_list = MyList()
     >>> my_list.append(1)
     >>> my_list.append(-4)
@@ -40,12 +42,17 @@ Tests:
     [-4, -3, 1, 2, 5]
 
 ::
- 
     >>> my_list = MyList()
     >>> print(my_list)
     []
     >>> my_list.print_sorted()
     []
+
+::
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> print(my_list)
+    [1]
 
 
     
