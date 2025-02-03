@@ -50,8 +50,12 @@ Tests:
 
 ::
     >>> my_list = MyList()
-    >>> if isinstance(my_list, list)
-    True
+    >>> my_list.append("M")
+    >>> my_list.append("A")
+    >>> my_list.append("X")
+    >>> my_list.append("R")
+    >>> my_list.append("O")
+    ["M","A","X","R","O"]
 
 
     
