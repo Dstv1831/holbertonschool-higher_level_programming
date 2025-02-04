@@ -19,4 +19,4 @@ class Square(Rectangle):
     
     def area(self):
         """Public instance method that calculates the Area"""
-        return pow(self.size, 2)
+        return pow(self.__size, 2)
