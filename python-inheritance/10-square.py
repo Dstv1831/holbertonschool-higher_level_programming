@@ -16,7 +16,7 @@ class Square(Rectangle):
 
         self.integer_validator("size", size)
         self.__size = size
-    
+
     def area(self):
         """Public instance method that calculates the Area"""
         return pow(self.__size, 2)
