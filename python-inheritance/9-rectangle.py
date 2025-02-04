@@ -23,7 +23,8 @@ class Rectangle(Base_Geo):
     def area(self):
         """Public instance method that calculates the Area"""
         return (self.__width*self.__height)
-    
+
     def __str__(self):
-        """str method, human-readable, or informal, string representation of an object."""
+        """str method, human-readable, or informal,
+        string representation of an object."""
         return (f"[Rectangle] {self.__width}/{self.__height}")
