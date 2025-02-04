@@ -1,67 +1,22 @@
 ===========================
-How to use 1-my_list.py
+How to use 7-base_geometry.py
 ===========================
 
-This module defines a class My_List that inherists form the class list.
+Module containing a BaseGeometry class
 
 Usage
 -----
 
-Returns an ascending sorted list.
+Define a class with two public instance methods
 
-First import ``My_List`` from the ``1-my_list.py`` file:
+First import ``BaseGeometry`` from the ``7-base_geometry.py`` file:
 
-    >>> MyList = __import__('1-my_list').MyList
+    >>> base_geo = __import__('7-base_geometry').BaseGeometry
 
 Tests:
 
 ::
-    
-    >>> my_list = MyList()
-    >>> my_list.append(1)
-    >>> my_list.append(4)
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(5)
-    >>> print(my_list)
-    [1, 4, 2, 3, 5]
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
-    >>> print(my_list)
-    [1, 4, 2, 3, 5]
-
-::
-
-    >>> my_list = MyList()
-    >>> my_list.append(1)
-    >>> my_list.append(-4)
-    >>> my_list.append(2)
-    >>> my_list.append(-3)
-    >>> my_list.append(5)
-    >>> print(my_list)
-    [1, -4, 2, -3, 5]
-    >>> my_list.print_sorted()
-    [-4, -3, 1, 2, 5]
-
-::
-    >>> my_list = MyList()
-    >>> print(my_list)
-    []
-    >>> my_list.print_sorted()
-    []
-
-::
-    >>> my_list = MyList()
-    >>> my_list.append("M")
-    >>> my_list.append("A")
-    >>> my_list.append("X")
-    >>> my_list.append("R")
-    >>> my_list.append("O")
-    >>> my_list.print_sorted()
-    ['A', 'M', 'O', 'R', 'X']
-
-
-    
-    
-    
-    
+    Standard Case:
+    >>> b_g = base_geo()
+    >>> b_g.area()
+    "area() is not implemented"
