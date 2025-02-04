@@ -5,6 +5,6 @@
 
 class BaseGeometry:
     """Empty class BaseGeometry that inherits from list"""
-    
+
     def area(self):
         raise Exception("area() is not implemented")
