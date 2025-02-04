@@ -42,6 +42,6 @@ Tests:
     >>> b_g = base_geo()
     >>> b_g.integer_validator("age" , "bye")
     Traceback (most recent call last):
-    TypeError: f"{name} must be an integer
+    ValueError: f"{name} must be an integer
 
 
