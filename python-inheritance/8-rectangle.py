@@ -19,13 +19,3 @@ class Rectangle(Base_Geo):
         self.__width = width
         self.integer_validator("height", height)
         self.__height = height
-    
-    def area(self):
-        """Public instance method that calculates the Area"""
-        return (self.__width*self.__height)
-    
-    def __str__(self):
-        """str method, human-readable, or informal, 
-        string representation of an object."""
-        return (f"[Rectangle], {self.__width}/{self.__height}")
-
