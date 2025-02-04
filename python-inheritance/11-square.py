@@ -20,7 +20,7 @@ class Square(Rectangle):
     def area(self):
         """Public instance method that calculates the Area"""
         return pow(self.__size, 2)
-    
+
     def __str__(self):
         """str method, human-readable, or informal,
         string representation of an object."""
