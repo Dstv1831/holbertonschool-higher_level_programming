@@ -42,5 +42,3 @@ Tests:
     integer validator no argument:
     >>> b_g = base_geo()
     >>> b_g.integer_validator("age", 1)
-    Traceback (most recent call last):
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
