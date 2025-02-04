@@ -28,3 +28,4 @@ Tests:
     integer validator introduced:
     >>> b_g = base_geo()
     >>> b_g.integer_validator()
+    "missing argument"
