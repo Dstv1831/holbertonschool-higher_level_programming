@@ -52,6 +52,6 @@ class Circle(Shape):
 
 def shape_info(figure):
     """Function that takes an object as an argument"""
-    print(figure.perimeter())
-    print(figure.area())
+    print(f"Area: {figure.area()}")
+    print(f"Perimeter: {figure.perimeter()}")
     return 0
