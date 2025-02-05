@@ -48,7 +48,7 @@ class Circle(Shape):
         return (pi)*pow(self.radius, 2)
 
     def perimeter(self):
-        return (2*pi*self.radius)
+        return (abs(2*pi*self.radius))
 
 def shape_info(figure):
     """Function that takes an object as an argument"""
