@@ -41,7 +41,7 @@ class Rectangle(Shape):
 
 class Circle(Shape):
     
-    def __init__(self, radius ):
+    def __init__(self, radius):
         self.radius = radius
 
     def area(self):
@@ -49,3 +49,9 @@ class Circle(Shape):
 
     def perimeter(self):
         return (2*pi*self.radius)
+
+def shape_info(figure):
+    """Function that takes an object as an argument"""
+    print(figure.perimeter())
+    print(figure.area())
+    return 0
