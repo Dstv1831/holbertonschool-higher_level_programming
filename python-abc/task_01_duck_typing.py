@@ -4,16 +4,18 @@ from math import pi
 
 """ Module that contains an Abstract Base Class (ABCs)
     classes that are meant to be incomplete
-    "Animal" and two derived subclasses "Dog" & "Cat" 
+    "Shape" and two derived subclasses "Rectangle" & "Circle" 
 """
 
 
 class Shape(ABC):
     """
-    Abstrac class named Animal with the ABC package
+    Abstrac class named Shape with the ABC package
 
     Methods:
-    sound
+    
+    area: returns the area of the shape
+    perimeter: returns the perimeter of the shape
     """
 
     @abstractmethod
