@@ -28,15 +28,15 @@ class Shape(ABC):
 
 class Rectangle(Shape):
 
-    def __init__(self, length, width):
-        self.length = length
+    def __init__(self, height, width):
+        self.height = height
         self.width = width
 
     def area(self):
-        return (self.length * self.width)
+        return (self.height * self.width)
 
     def perimeter(self):
-        return (self.length * 2 + 2 * self.width)
+        return (self.height * 2 + 2 * self.width)
 
 
 class Circle(Shape):
