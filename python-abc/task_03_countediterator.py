@@ -21,7 +21,7 @@ class CountedIterator:
     def get_count(self):
         return (self.counter)
     
-    def __next__(self, ):
+    def __next__(self):
         try:
             item = next(self.iterator)
         except StopIteration as e:
