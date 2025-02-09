@@ -27,8 +27,8 @@ class Dragon(SwimMixin, FlyMixin):
         Roar: Returns "<name> roars!"
     """ 
 
-    def __init__(self, name):
-        self.Name = name
+    def __init__(self):
+        self.name = "Raehgar"
     
     def roar(self):
-        print(f"{self.Name} roar !!!")
+        print(f"{self.name} roar !!!")
