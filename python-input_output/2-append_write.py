@@ -1,18 +1,19 @@
 #!/usr/bin/python3
+import json
 
 """
-This module contains a function that opens a file,
-appends a string at the end of it, and returns
-the number of characters add it
+This module contains a function that returns
+the JSON representation of an object
 """
 
 
-def append_write(filename="", text=""):
+def to_json_string(my_obj):
 
     """
-    Function that opens a file,
-    appends a string at the end of it,
-    and returns the number of characters add it
+    Function returns the JSON 
+    representation of an object
     """
-    with open(file=filename, mode="a", encoding="utf-8") as myfile:
-        return myfile.write(text)
+
+    json_string = json.dumps(my_obj)
+    return json_string
+    
