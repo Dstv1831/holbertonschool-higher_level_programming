@@ -2,7 +2,8 @@
 
 """
 This module contains a function that returns
-the JSON representation of an object
+the JSON formatted string representation of an object
+(ENCODING)
 """
 
 import json
