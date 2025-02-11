@@ -14,7 +14,7 @@ def write_file(filename = "", text = ""):
     it and print the number of characters
     """
 
-    with open(file = filename, mode = "w", encoding = "utf-8") as myfile:
+    with open(file = filename, mode = "r+", encoding = "utf-8") as myfile:
         myfile.write(text)
         content_list = (myfile.read()).split
 
