@@ -15,4 +15,4 @@ def append_write(filename="", text=""):
     and returns the number of characters add it
     """
     with open(file=filename, mode="a", encoding="utf-8") as myfile:
-        return myfile.append(text)
+        return myfile.write(text)
