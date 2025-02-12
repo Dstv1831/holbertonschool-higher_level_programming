@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 
 """
@@ -16,4 +15,4 @@ def load_from_json_file(filename):
     and creates and Object from it
     """
     with open(file=filename, mode="r", encoding="utf-8") as myfile:
-        return(json.load(myfile))
+        return (json.load(myfile))
