@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 
 """
-This module contains a script that adds all arguments
+This module contains a script that adds all the stdin arguments
 to a Python list, and then save them to a file
 """
 
-import json
 import sys
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-with open (file="add_item.json", mode="w", encoding="utf-8") as myfile:
-    json.dump(sys.argv, myfile)
+save_to_json_file(sys.argv, "add_item.json")
