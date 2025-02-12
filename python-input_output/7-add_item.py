@@ -15,5 +15,5 @@ try:
     vector = load_from_json_file("add_item.json")
 except FileNotFoundError:
     vector = []
-vector.append(sys.argv)
+vector.extend(sys.argv[1:])
 save_to_json_file(vector, "add_item.json")
