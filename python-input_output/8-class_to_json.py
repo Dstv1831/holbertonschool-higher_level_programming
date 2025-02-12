@@ -8,7 +8,7 @@ for JSON serialization of an object
 
 
 def class_to_json(obj):
-    
+
     """
     returns de dictionary description of a class
     """
