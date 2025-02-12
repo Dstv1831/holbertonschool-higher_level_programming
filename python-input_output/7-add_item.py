@@ -14,6 +14,6 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 try:
     vector = load_from_json_file("add_item.json")
 except FileNotFoundError:
-    pass
+    vector = []
 vector.append(sys.argv)
 save_to_json_file(vector, "add_item.json")
