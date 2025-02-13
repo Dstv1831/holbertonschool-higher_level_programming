@@ -13,7 +13,7 @@ def pascal_triangle(n):
     triangle = [[1]]
 
     if n <= 0:
-        return triangle
+        return []
 
     while len(triangle) != n:
         new = [1]
