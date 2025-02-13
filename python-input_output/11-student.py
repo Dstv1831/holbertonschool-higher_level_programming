@@ -37,5 +37,6 @@ class Student:
             return self.__dict__
 
     def reload_from_json(self, json):
+        # Goes thorugh all the key in the dictionary
         for k in json:
             setattr(self, k, json[k])
