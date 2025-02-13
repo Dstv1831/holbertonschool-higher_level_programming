@@ -27,9 +27,7 @@ class Student:
 
     def to_json(self, attr=None): 
         if attr:
-            new_dict = self.__dict__
-            for each in attr:
-                new_dict.update(new_dict[each])
+            new_dict = { key: self.__dict__[key] for key in self.__dict__ if (key in attr)}
             return new_dict            
 
         else:
