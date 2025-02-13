@@ -6,6 +6,7 @@ method that retrieves a dictionary representation
 of a student instance
 """
 
+
 class Student:
     """
     Class that creates a student
