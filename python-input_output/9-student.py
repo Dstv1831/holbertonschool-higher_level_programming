@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 
 """
-This module contains a Class Student with a public 
+This module contains a Class Student with a public
 method that retrieves a dictionary representation
 of a student instance
 """
 
 class Student:
-    
     """
     Class that creates a student
 
