@@ -27,7 +27,9 @@ class Student:
 
     def to_json(self, attr=None):
         if attr is not None:
-            new_dict = { key: self.__dict__[key] for key in self.__dict__ if (key in attr)}
+            new_dict = {key: self.__dict__[key]
+                        for key in self.__dict__ 
+                        if (key in attr)}
             return new_dict
 
         else:
