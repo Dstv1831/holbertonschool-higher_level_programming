@@ -35,7 +35,7 @@ class Student:
 
         else:
             return self.__dict__
-        
+
     def reload_from_json(self, json):
         for k in json:
             setattr(self, k, json[k])
