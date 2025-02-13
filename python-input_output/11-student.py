@@ -37,7 +37,5 @@ class Student:
             return self.__dict__
         
     def reload_from_json(self, json):
-        if json is not None:
-            self.first_name = json["first_name"]
-            self.last_name = json["last_name"]
-            self.age = json["age"]
+        for k in json:
+            setattr(self, k, json[k])
