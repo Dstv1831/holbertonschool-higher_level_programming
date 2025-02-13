@@ -10,17 +10,16 @@ def pascal_triangle(n):
     Function that prints the Pascal Triangle
     """
 
-    counter = 0
-    pascal = []
-    triangle = []
+    triangle = [[1]]
 
     if n <= 0:
         return triangle
-        
-    while counter != n:
-        pascal = [1]
-        for count in enumerate(pascal):
-            pascal.append(pascal[count] + pascal[count + 1])
-            print(pascal)
-        counter += 1
-    
+
+    while len(triangle) != n:
+        new = [1]
+        pas = triangle[-1]
+        for i in range(len(triangle) - 1):
+            new.append(pas[i] + pas[i+1])
+        new.append(1)
+        triangle.append(new)
+    return triangle
