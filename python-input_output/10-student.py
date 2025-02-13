@@ -15,9 +15,9 @@ class Student:
         public instance first_name
         public instance last_name
         public instance age
-    
+
     public methods:
-        to_jason: Return the specified attributes value 
+        to_jason: Return the specified attributes value
     """
 
     def __init__(self, first_name, last_name, age):
@@ -25,10 +25,10 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attr=None): 
+    def to_json(self, attr=None):
         if attr is not None:
             new_dict = { key: self.__dict__[key] for key in self.__dict__ if (key in attr)}
-            return new_dict            
+            return new_dict
 
         else:
             return self.__dict__
