@@ -11,10 +11,10 @@ import json
 def serialize_and_save_to_file(data, filename):
 
     with open(file=filename, mode="w", encoding="utf-8") as myfile:
-        return json.dumps(data, myfile)
+        json.dump(data, myfile)
 
 
 def load_and_deserialize(filename):
 
     with open(file=filename, mode="w", encoding="utf-8") as myfile:
-        return json.loads(myfile)
+        json.loads(myfile)
