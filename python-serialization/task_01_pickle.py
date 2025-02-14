@@ -29,6 +29,6 @@ class CustomObject:
         try:
             with open(file=filename, mode="rb") as myfile:
                 data = pickle.load(myfile)
-        except pickle.PicklingError:
+        except EOFError:
             return None
         return data
