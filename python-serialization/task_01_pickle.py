@@ -30,6 +30,6 @@ class CustomObject:
             with open(file=filename, mode="rb") as myfile:
                 data = pickle.load(myfile)
         except pickle.PickleError:
-            pass
+            return None
         
         return data
