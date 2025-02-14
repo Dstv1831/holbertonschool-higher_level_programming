@@ -19,5 +19,6 @@ def convert_csv_to_json(csv_file):
         return False
     
     with open(file="data.json", mode="w", encoding="utf-8") as jsonf:
+        print(data_list)
         json.dump(data_list, jsonf)
     return True
