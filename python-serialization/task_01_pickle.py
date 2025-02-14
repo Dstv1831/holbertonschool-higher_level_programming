@@ -31,3 +31,4 @@ class CustomObject:
                 data = pickle.load(myfile)
             except pickle.PickleError:
                 pass
+            return data
