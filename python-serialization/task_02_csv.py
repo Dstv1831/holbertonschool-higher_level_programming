@@ -18,6 +18,6 @@ def convert_csv_to_json(csv_file):
     except FileNotFoundError:
         return False
     
-    with open(file="json.data", mode="w", encoding="utf-8") as jsonf:
+    with open(file="data.json", mode="w", encoding="utf-8") as jsonf:
         json.dump(data_list, jsonf)
     return True
