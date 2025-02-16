@@ -26,7 +26,7 @@ def deserialize_from_xml(filename):
     new_dict = {}
 
     for child in root:
-        value = child.text.strip()
+        value = child.text.strip() if child.text else ""
         if value.isdigit():
             value = int(value)
         new_dict[child.tag] = value
