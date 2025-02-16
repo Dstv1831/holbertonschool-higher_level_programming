@@ -23,30 +23,6 @@ def deserialize_from_xml(filename):
     tree = ET.parse(filename)
     root = tree.getroot()
 
-    new_dict = {}
-
-    for child in root:
-        value = child.text
-        # if value.isdigit():
-        #     value = int(value)
-        new_dict[child.tag] = value  # Add the tag and value to the dictionary
+    new_dict = {child.tag: child.text for child in root}
 
     return new_dict
-
-# def main():
-#     sample_dict = {
-#         'name': 'John',
-#         'age': '28',
-#         'city': 'New York'
-#     }
-
-#     xml_file = "data.xml"
-#     serialize_to_xml(sample_dict, xml_file)
-#     print(f"Dictionary serialized to {xml_file}")
-
-#     deserialized_data = deserialize_from_xml(xml_file)
-#     print("\nDeserialized Data:")
-#     print(deserialized_data)
-
-# if __name__ == "__main__":
-#     main()
