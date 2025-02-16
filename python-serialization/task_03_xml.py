@@ -29,6 +29,8 @@ def deserialize_from_xml(filename):
         value = child.text.strip() if child.text else ""
         if value.isdigit():
             value = int(value)
+        elif value.replace('.', '', 1).isdigit() and value.count('.') < 2:
+            value = float(value)
+
         new_dict[child.tag] = value
-    # new_dict = {child.tag: child.attrib for child in root}
     return new_dict
