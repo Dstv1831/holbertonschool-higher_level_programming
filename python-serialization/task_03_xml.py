@@ -8,13 +8,13 @@ Serialize and Deserialize using XML
 import xml.etree.ElementTree as ET
 
 def serialize_to_xml(dictionary, filename):
-    
+
     root = ET.Element("data")
 
     for key, val in dictionary.items():
         element = ET.SubElement(root, key)
         element.text = val
-    
+
     tree = ET.ElementTree(root)
     tree.write(filename)
 
