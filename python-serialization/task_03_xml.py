@@ -26,17 +26,10 @@ def deserialize_from_xml(filename):
     new_dict = {}
 
     for child in root:
-        value = child.text.strip() if child.text else ""  # Handle empty text
-
-        # Try converting to integer or float, otherwise leave as string
+        value = child.text
         if value.isdigit():
-            value = int(value)  # Convert to integer if it represents a number
-        elif value.replace('.', '', 1).isdigit() and value.count('.') < 2:
-            value = float(value)  # Convert to float if it represents a float
-        else:
-            value = str(value)  # Keep as string if it doesn't match number formats
-
+            value = int(value)
+        print(value)
         new_dict[child.tag] = value  # Add the tag and value to the dictionary
 
     return new_dict
-
