@@ -13,7 +13,7 @@ def serialize_to_xml(dictionary, filename):
 
     for key, val in dictionary.items():
         element = ET.SubElement(root, key)
-        element.text = val
+        element.text = str(val)
 
     tree = ET.ElementTree(root)
     tree.write(filename)
