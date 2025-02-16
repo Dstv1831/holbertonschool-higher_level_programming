@@ -16,12 +16,19 @@ def serialize_to_xml(dictionary, filename):
         element.text = str(val)
 
     tree = ET.ElementTree(root)
-    tree.write(filename)
+    tree.write(filename, encoding="utf-8", xml_declaration=True)
 
 def deserialize_from_xml(filename):
 
     tree = ET.parse(filename)
     root = tree.getroot()
 
-    new_dict = {child.tag: child.attrib for child in root}
+    new_dict = {}
+
+    for child in root:
+        value = child.attrib
+        if value.isdigit():
+            value = int(value)
+        new_dict[child.tag] = value
+    # new_dict = {child.tag: child.attrib for child in root}
     return new_dict
