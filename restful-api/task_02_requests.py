@@ -6,6 +6,7 @@ import csv
 def fetch_and_print_posts():
     r = requests.get('https://jsonplaceholder.typicode.com/posts')
     status = r.status_code
+    print(status)
     if status == 200:
         data = r.json()
         for item in data:
