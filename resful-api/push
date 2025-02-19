@@ -1,6 +1,0 @@
-#!/bin/bash
-
-chmod 755 *
-git add *
-git commit -m "Task Complete"
-git push
