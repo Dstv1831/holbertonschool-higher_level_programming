@@ -34,7 +34,7 @@ class Server(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(json_data)
 
         else:
-            self.send_response(404, "Nanishiteru")
+            self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
