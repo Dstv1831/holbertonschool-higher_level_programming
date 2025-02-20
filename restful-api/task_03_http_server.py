@@ -13,10 +13,10 @@ API_DATA = {
 
 class Server(http.server.SimpleHTTPRequestHandler):
 
-    def __init__(self, api_data = None):
-        "Initialize with external data"
-        super().__init__()
-        self.api_data = api_data
+    def __init__(self, *args, api_data=None, **kwargs):
+        """Initialize with external data"""
+        self.api_data = api_data or {}  # Use passed api_data or empty dictionary
+        super().__init__(*args, **kwargs)
 
     def json_response(self, data, status = 200):
         "From Dict to Json to web-server"
