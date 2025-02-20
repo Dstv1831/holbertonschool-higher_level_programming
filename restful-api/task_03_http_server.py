@@ -6,7 +6,26 @@ import json
 
 PORT = 8000
 
+API_DATA = {
+    "data": {"name": "John", "age": 30, "city": "New York"},
+    "info": {"version": "1.0", "description": "A simple API built with http.server"}
+}
+
 class Server(http.server.SimpleHTTPRequestHandler):
+
+    def __init__(self, api_data = None):
+        "Initialize with external data"
+        super.__init__()
+        self.api_data = api_data
+
+    def json_response(self, data, status = 200):
+        "From Dict to Json to web-server"
+         # encoding is neccesary because .wfile.write expect bytes object, not String object
+        json_data = json.dumps(data).encode("utf-8")
+        self.send_response(status)
+        self.send_header("Content-type", "application/json")
+        self.end_headers()
+        self.wfile.write(json_data)
 
     def do_GET(self):
         if self.path == '/':
@@ -16,22 +35,10 @@ class Server(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(b"Hello, this is a simple API!")
 
         elif self.path == '/data':
-            data = {"name": "John", "age": 30, "city": "New York"}
-            # encoding is neccesary because .wfile.write expect bytes object, not String object
-            json_data = json.dumps(data).encode("utf-8")
-            self.send_response(200)
-            self.send_header("Content-type", "application/json")
-            self.end_headers()
-            self.wfile.write(json_data)
+            self.json_response(self.api_data.get("data", {}) )
 
         elif self.path == '/info':
-            data = {"version": "1.0", "description": "A simple API built with http.server"}
-            # encoding is neccesary because .wfile.write expect bytes object, not String object
-            json_data = json.dumps(data).encode("utf-8")
-            self.send_response(200)
-            self.send_header("Content-type", "application/json")
-            self.end_headers()
-            self.wfile.write(json_data)
+            self.json_response(self.api_data.get("info", {}) )
 
         elif self.path == '/status':
             self.send_response(200)
