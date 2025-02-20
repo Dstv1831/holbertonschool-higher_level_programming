@@ -35,6 +35,9 @@ class Server(http.server.SimpleHTTPRequestHandler):
 
         elif self.path == '/status':
             self.send_response(200)
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
+            self.wfile.write(b"OK")
         
         else:
             self.send_response(404)
