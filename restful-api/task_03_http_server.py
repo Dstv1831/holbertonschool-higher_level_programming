@@ -33,6 +33,9 @@ class Server(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json_data)
 
+        elif self.path == '/status':
+            self.send_response(200)
+        
         else:
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
