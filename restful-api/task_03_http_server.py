@@ -3,6 +3,7 @@
 import http.server
 import socketserver
 import json
+from functools import partial
 
 PORT = 8000
 
@@ -52,7 +53,8 @@ class Server(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
 
+Handler = partial(Server, api_data=API_DATA)
 
-with socketserver.TCPServer(("", PORT), Server) as httpd:
+with socketserver.TCPServer(("", PORT), Handler) as httpd:
     print("serving at port", PORT)
     httpd.serve_forever()
