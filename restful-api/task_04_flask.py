@@ -20,10 +20,10 @@ def data():
 def status():
     return "OK"
 
-@app.route("/users/<username>")
-def info(username):
-    user = users[username]
-    return jsonify(users)
+@app.route("/users/<user_name>")
+def info(user_name):
+    user = users[user_name]
+    return jsonify(user)
 
 if __name__ == "__main__":
     app.run()
