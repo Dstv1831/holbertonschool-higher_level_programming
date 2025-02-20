@@ -15,7 +15,7 @@ class Server(http.server.SimpleHTTPRequestHandler):
 
     def __init__(self, api_data = None):
         "Initialize with external data"
-        super.__init__()
+        super().__init__()
         self.api_data = api_data
 
     def json_response(self, data, status = 200):
