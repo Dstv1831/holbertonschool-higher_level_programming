@@ -27,16 +27,19 @@ def info(user_name):
     user = users.get(user_name)
     if user:
         return jsonify(user)
-    return jsonify({"error": "User not found"})
+    return jsonify({"error": "User not found"}), 404
 
-@app.route("/add_user", methods=['GET','POST'])
+@app.route("/add_user", methods=['POST'])
 def add():
-    # if request.method == 'POST':
-        new_user = {"username": "john", "name": "John", "age": 30, "city": "New York"}
-        users["username"] = new_user
+        data = request.get_json()
+        if not data or "username" not in data:
+            return jsonify({"error": "Username is required"}), 400
+        
+        username = data["username"]
+        users[username] = data
         return (jsonify({
             "message": "User added",
-            "user": new_user
+            "user": data
             }), 201)
 
 if __name__ == "__main__":
