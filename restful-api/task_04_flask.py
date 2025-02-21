@@ -2,10 +2,7 @@
 
 from flask import Flask, jsonify, request
 
-users = {"Jane": {"Username": "Jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
-         "David": {"Username": "DSTV", "name": "Santiago", "age": 30, "city": "Melbourne"},
-         "Nicolas": {"Username": "Nico", "name": "Eduardo", "age": 32, "city": "Jenna"}
-        }
+users = {}
 
 app = Flask(__name__)
 
