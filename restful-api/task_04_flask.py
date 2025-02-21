@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 users = {"Jane": {"Username": "Jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
-         "David": {"Username": "DSTV", "name": "Santiago", "age": 30, "city": "Melbourne"}
+         "David": {"Username": "DSTV", "name": "Santiago", "age": 30, "city": "Melbourne"},
+         "Nicolas": {"Username": "Nico", "name": "Eduardo", "age": 32, "city": "Jenna"}
         }
 
 app = Flask(__name__)
@@ -14,7 +15,8 @@ def home():
 
 @app.route("/data")
 def data():
-    return jsonify(users)
+    client = list(users)
+    return client
 
 @app.route("/status")
 def status():
@@ -22,8 +24,20 @@ def status():
 
 @app.route("/users/<user_name>")
 def info(user_name):
+    if user_name not in list(users):
+         return {"error": "User not found"}
     user = users[user_name]
     return jsonify(user)
+
+@app.route("/add_user", methods=['GET','POST'])
+def add():
+    # if request.method == 'POST':
+        new_user = {"username": "john", "name": "John", "age": 30, "city": "New York"}
+        users["username"] = new_user
+        return (jsonify({
+            "message": "User added",
+            "user": new_user
+            }), 201)
 
 if __name__ == "__main__":
     app.run()
