@@ -2,9 +2,9 @@
 
 from flask import Flask, jsonify, request
 
-users = {"Jane": {"name": "Jane", "age": 28, "city": "Los Angeles"},
-         "David": {"name": "Santiago", "age": 30, "city": "Melbourne"},
-         "Nicolas": {"name": "Eduardo", "age": 32, "city": "Jenna"}
+users = {"Jane": {"Username": "Jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
+         "David": {"Username": "DSTV", "name": "Santiago", "age": 30, "city": "Melbourne"},
+         "Nicolas": {"Username": "Nico", "name": "Eduardo", "age": 32, "city": "Jenna"}
         }
 
 app = Flask(__name__)
@@ -16,7 +16,7 @@ def home():
 @app.route("/data")
 def data():
     client = list(users)
-    return client
+    return jsonify(client)
 
 @app.route("/status")
 def status():
