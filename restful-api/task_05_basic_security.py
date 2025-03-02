@@ -43,7 +43,6 @@ def access():
     return jsonify(message="Basic Auth: Access granted")
 
 @app.route('/login', methods=['POST'])
-@auth.login_required
 def login():
     data = request.get_json()
     username = data.get("username")
