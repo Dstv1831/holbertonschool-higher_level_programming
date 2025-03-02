@@ -32,7 +32,7 @@ users = {
 def verify_password(username, password):
     for user in users.values():
         if user['username'] == username and \
-        check_password_hash(user['password'], password=password):
+            check_password_hash(user['password'], password=password):
             return username
     return None
 
@@ -48,9 +48,11 @@ def login():
     username = data.get("username")
     password = data.get("password")
     
-    if username in users and check_password_hash(users[username]['password'], password):
-        access_token = create_access_token(identity={"username": username, "role": users[username]['role']})
-        return jsonify(access_token=access_token)
+    for key, user_data in users.items():
+        if user_data["username"] == username and \
+             check_password_hash(users[username]['password'], password):
+             access_token = create_access_token(identity={"username": username, "role": users[username]['role']})
+             return jsonify(access_token=access_token)
     return jsonify(error="Invalid credentials"), 401
 
 @app.route('/jwt-protected')
