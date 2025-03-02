@@ -50,8 +50,8 @@ def login():
     
     for key, user_data in users.items():
         if user_data["username"] == username and \
-             check_password_hash(users[username]['password'], password):
-             access_token = create_access_token(identity={"username": username, "role": users[username]['role']})
+             check_password_hash(user_data['password'], password):
+             access_token = create_access_token(identity={"username": username, "role": user_data['role']})
              return jsonify(access_token=access_token)
     return jsonify(error="Invalid credentials"), 401
 
