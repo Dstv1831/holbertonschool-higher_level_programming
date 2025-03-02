@@ -7,7 +7,7 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
-app.config['JWT_SCRET_KEY'] = 'SecretKey'
+app.config['JWT_SECRET_KEY'] = 'SecretKey'
 jwt = JWTManager(app=app)
 
 # .get("username") -> returns the value of that Key
@@ -33,7 +33,7 @@ def verify_password(username, password):
     for user in users.values():
         if user['username'] == username and \
             check_password_hash(user['password'], password=password):
-            return username
+            return user
     return None
 
 @app.route("/basic-protected")
@@ -43,16 +43,23 @@ def access():
     return jsonify(message="Basic Auth: Access granted")
 
 @app.route('/login', methods=['POST'])
+@auth.login_required
 def login():
     data = request.get_json()
     username = data.get("username")
     password = data.get("password")
     
+     # Check if username and password are provided
+    if not username or not password:
+        return jsonify(error="Username and password required"), 400
+    
     for key, user_data in users.items():
-        if user_data["username"] == username and \
-             check_password_hash(user_data['password'], password):
-             access_token = create_access_token(identity={"username": username, "role": user_data['role']})
-             return jsonify(access_token=access_token)
+        if user_data["username"] == username and check_password_hash(user_data['password'], password):
+            # Successfully authenticated, create access token
+            access_token = create_access_token(identity={"username": username, "role": user_data['role']})
+            return jsonify(access_token=access_token)
+
+    # Invalid credentials
     return jsonify(error="Invalid credentials"), 401
 
 @app.route('/jwt-protected')
