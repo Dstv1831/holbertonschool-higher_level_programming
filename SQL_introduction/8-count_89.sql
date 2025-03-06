@@ -2,4 +2,4 @@
 -- with id = 89 in the first_table 
 -- from the database hbtn_0c_0 in MySQL server
 
-SELECT COUNT(id) FROM first_table WHERE id = 89;
+SELECT COUNT(*) FROM first_table WHERE id = 89;
