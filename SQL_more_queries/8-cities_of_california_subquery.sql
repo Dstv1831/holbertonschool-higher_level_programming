@@ -10,12 +10,19 @@ CREATE TABLE IF NOT EXISTS states (
     name VARCHAR(256) NOT NULL
 );
 
+INSERT INTO states (name) VALUES ('California');
+
 CREATE TABLE IF NOT EXISTS cities (
     id INT AUTO_INCREMENT PRIMARY KEY,
     state_id INT NOT NULL,
     name VARCHAR(256) NOT NULL,
     FOREIGN KEY (state_id) REFERENCES states(id)
 );
+
+INSERT INTO cities (name, state_id) VALUES 
+('San Francisco', 1), 
+('San Diego', 1), 
+('San Jose', 1);
 
 SELECT cities.id, cities.name
 FROM cities, states
