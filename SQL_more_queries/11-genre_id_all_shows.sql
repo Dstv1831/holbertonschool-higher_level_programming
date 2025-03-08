@@ -1,5 +1,5 @@
 -- lists all the shows contained in hbtn_0d_tvshows
--- that have at least one genre linked.
+-- If a show doesn’t have a genre, display NULL.
 
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
