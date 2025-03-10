@@ -16,8 +16,8 @@ def list_states():
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=database, port=3306)
     cur = db.cursor()
-    query = "SELECT name FROM cities INNER JOIN states on\
-        cities.state_id = states.id WHERE states.name = %s"
+    query = "SELECT name FROM cities WHERE state_id = (\
+         SELECT if FROM states WHERE name = %s) ORDER BY id ASC "
 
     cur.execute(query, (state,))
 
