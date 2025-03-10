@@ -17,8 +17,9 @@ def list_states():
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=database, port=3306)
     cur = db.cursor()
-
-    cur.execute("SELECT * FROM states WHERE name ='{}'ORDER BY states.id ASC".format(state_name))
+    query = f"SELECT * FROM states WHERE name =\
+        {state_name} ORDER BY states.id ASC"
+    cur.execute(query)
 
     states = cur.fetchall()
 
