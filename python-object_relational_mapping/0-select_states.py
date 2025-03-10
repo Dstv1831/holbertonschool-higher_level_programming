@@ -5,7 +5,6 @@
 import MySQLdb
 import sys
 
-
 def list_states():
     username = sys.argv[1]
     password = sys.argv[2]
@@ -23,6 +22,7 @@ def list_states():
 
     cur.close()
     db.close()
+
 
 if __name__ == "__main__":
     list_states()
