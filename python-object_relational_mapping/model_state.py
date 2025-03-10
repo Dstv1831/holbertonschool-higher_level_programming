@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""This model contains the class definition of a State
+and an instance Base = declarative_base():"""
+
+
 from sqlalchemy import (
     create_engine,
     inspect,
