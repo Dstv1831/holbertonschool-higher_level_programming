@@ -15,7 +15,7 @@ def list_states():
                          passwd=password, db=database, port=3306)
     cur = db.cursor()
     query = "SELECT cities.id, cities.name, states.name\
-        FROM cities INNER JOIN states on cities.states_id = state.id"
+        FROM cities INNER JOIN states on cities.state_id = state.id"
 
     cur.execute(query)
 
