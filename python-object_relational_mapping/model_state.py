@@ -10,23 +10,17 @@ from sqlalchemy import (
     Integer)
 from sqlalchemy.ext.declarative import declarative_base
 
-
-db_url = "sqlite://"
-engine = create_engine(db_url)
 Base = declarative_base()
 
 class State (Base):
+    """State class that links to the MySQL table `states`."""
     
-    """ Class state that inherits from Base
-    
-    Attriibutes:
-        id: INT primary Key
-        name: STRING max of 128 char"
-        """
-    
-    __tablename__ = 'state_table'
-    id = Column(Integer, primary_key=True, nullable=False)
+    __tablename__ = 'states'
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
+
+db_url = "sqlite://"
+engine = create_engine(db_url)
 
 Base.metadata.create_all(engine)
 
