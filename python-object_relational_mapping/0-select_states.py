@@ -11,8 +11,8 @@ def list_states():
     password = sys.argv[2]
     database = sys.argv[3]
 
-    db = MySQLdb.connect (host="localhost",\
-                          user=username, passwd=password, db=database)
+    db = MySQLdb.connect(host="localhost", user=username,
+                         passwd=password, db=database)
     cur = db.cursor()
 
     cur.execute("SELECT * FROM states ORDER BY states.id")
