@@ -23,7 +23,7 @@ def list_states():
 
     cities = cur.fetchall()
 
-    print (", ".join(city[0]) for city in cities)
+    print(", ".join([city[0]for city in cities]))
 
     cur.close()
     db.close()
