@@ -14,7 +14,7 @@ def list_states():
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=database, port=3306)
     cur = db.cursor()
-    query = "SELECT * FROM cities, states"
+    query = "SELECT id, name FROM cities, states WHERE cities.id == states.id"
 
     cur.execute(query)
 
