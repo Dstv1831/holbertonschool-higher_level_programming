@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """ This module akes in an argument and displays
-all values in the states table of hbtn_0e_0_usa 
+all values in the states table of hbtn_0e_0_usa
 where name matches the argument. """
 
 import MySQLdb
@@ -18,7 +18,7 @@ def list_states():
     cur = db.cursor()
     query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
     cur.execute(query)
-    
+
     states = cur.fetchall()
 
     for state in states:
