@@ -3,7 +3,6 @@
 """This model contains the class definition of a State
 and an instance Base = declarative_base():"""
 
-
 from sqlalchemy import (
     create_engine,
     inspect,
@@ -11,6 +10,7 @@ from sqlalchemy import (
     String,
     Integer)
 from sqlalchemy.ext.declarative import declarative_base
+
 
 db_url = "sqlite://"
 engine = create_engine(db_url)
