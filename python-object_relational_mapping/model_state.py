@@ -10,6 +10,7 @@ from sqlalchemy import (
     Integer)
 from sqlalchemy.ext.declarative import declarative_base
 
+#  Define the base class for ORM models
 Base = declarative_base()
 
 class State (Base):
@@ -22,6 +23,7 @@ class State (Base):
 db_url = "sqlite://"
 engine = create_engine(db_url)
 
+# Create all tables
 Base.metadata.create_all(engine)
 
 
