@@ -17,7 +17,7 @@ def list_states():
                          passwd=password, db=database, port=3306)
     cur = db.cursor()
     query = "SELECT name FROM cities WHERE state_id = (\
-         SELECT if FROM states WHERE name = %s) ORDER BY id ASC "
+         SELECT id FROM states WHERE name = %s) ORDER BY id ASC "
 
     cur.execute(query, (state,))
 
