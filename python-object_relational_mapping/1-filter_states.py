@@ -16,7 +16,7 @@ def list_states():
                          passwd=password, db=database, port=3306)
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE  ORDER BY states.id ASC".format(state_name))
+    cur.execute("SELECT * FROM states WHERE name ='{}'ORDER BY states.id ASC".format(state_name))
 
     states = cur.fetchall()
 
