@@ -20,7 +20,7 @@ def list_states():
     query = "SELECT * FROM states WHERE name =\
         '{}'ORDER BY states.id ASC".format(state_name)
 
-    cur.execute()
+    cur.execute(query)
 
     states = cur.fetchall()
 
