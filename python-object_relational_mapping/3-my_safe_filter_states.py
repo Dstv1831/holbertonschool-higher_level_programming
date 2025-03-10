@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-""" This module akes in an argument and displays
+""" This module takes in an argument and displays
 all values in the states table of hbtn_0e_0_usa
-where name matches the argument. """
+where name matches the argument, But this time is
+safe from MySQL injections! """
 
 import MySQLdb
 import sys

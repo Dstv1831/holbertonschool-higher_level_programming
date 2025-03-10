@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
-""" This module akes in an argument and displays
-all values in the states table of hbtn_0e_0_usa
-where name matches the argument. """
+""" This module lists all states with a name starting
+with N (upper N) from the database hbtn_0e_0_usa """
 
 import MySQLdb
 import sys
