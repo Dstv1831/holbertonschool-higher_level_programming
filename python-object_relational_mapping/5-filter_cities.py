@@ -16,15 +16,15 @@ def list_states():
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=database, port=3306)
     cur = db.cursor()
-    query = "SELECT cities.name FROM cities INNER JOIN states on\
+    query = "SELECT name FROM cities INNER JOIN states on\
         cities.state_id = states.id WHERE states.name = %s"
 
     cur.execute(query, (state,))
 
     cities = cur.fetchall()
 
-    for citie in cities:
-        print(citie)
+    for city in cities:
+        print(city)
 
     cur.close()
     db.close()
