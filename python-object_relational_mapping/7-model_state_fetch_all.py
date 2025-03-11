@@ -21,7 +21,7 @@ engine = create_engine(db_url)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-states = session.query(State).order_by(State.id).all
+states = session.query(State).order_by(State.id).all()
 
 for state in states:
     print(f"{states.id}: {state.name}")
