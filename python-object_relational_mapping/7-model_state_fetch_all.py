@@ -15,7 +15,7 @@ if __name__=="__main__":
     password = sys.argv[2]
     database = sys.argv[3]
 
-    db_url = "sqlite://"
+    db_url = f"mysql://{username}:{password}@localhost:3306/{database}"
     engine = create_engine(db_url)
 
     # create a Session
@@ -28,4 +28,3 @@ if __name__=="__main__":
         print(f"{state.id}: {state.name}")
 
     session.close()
-    
