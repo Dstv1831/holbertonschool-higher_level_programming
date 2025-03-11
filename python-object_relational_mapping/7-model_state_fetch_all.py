@@ -25,7 +25,7 @@ def list_states():
     states = session.query(State).order_by(State.id).all()
 
     for state in states:
-        print(f"{states.id}: {state.name}")
+        print(f"{state.id}: {state.name}")
 
     session.close()
 
