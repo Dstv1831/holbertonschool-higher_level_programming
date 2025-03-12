@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""  adds the State object “Louisiana” 
+"""  adds the State object “Louisiana”
 to the database hbtn_0e_6_usa"""
 
 import sys
@@ -22,10 +22,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    louis = State(name = "Louisiana")
+    louis = State(name="Louisiana")
     session.add(louis)
     session.commit()
-
     print(louis.id)
-    
     session.close()
