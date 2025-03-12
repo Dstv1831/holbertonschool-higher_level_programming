@@ -25,6 +25,9 @@ if __name__ == "__main__":
 
     state = session.query(State).filter(State.name == state_name)
     # state = session.query(State).get({"name":f"{state_name}"})
-    print(f"{state.id}")
+    if state:
+        print(f"{state.id}")
+    else: 
+        print("Not found")
 
     session.close()
