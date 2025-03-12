@@ -28,7 +28,8 @@ if __name__ == "__main__":
     # FROM cities
     # JOIN states ON cities.state_id = states.id
     # ORDER BY cities.id;
-    cities = session.query(City, State.name).join(State).order_by(City.id).all()
+    cities = session.query(City, State.name)\
+        .join(State).order_by(City.id).all()
 
     for city, state_name in cities:
         print(f"{state_name}: ({city.id}) {city.name}")
