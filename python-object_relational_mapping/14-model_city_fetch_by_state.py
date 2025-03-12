@@ -23,10 +23,14 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    cities = session.query(City).join(State).order_by(City.id).all()
+    # this will return tuples insted of just one object, same as this:
+    # SELECT cities.id, cities.name, states.name
+    # FROM cities
+    # JOIN states ON cities.state_id = states.id
+    # ORDER BY cities.id;
+    cities = session.query(City, State.name).join(State).order_by(City.id).all()
 
-    for city in cities:
-        print(city)
-        print(f"({city.id}) {city.name}") 
+    for city, state_name in cities:
+        print(f"{state_name}: ({city.id}) {city.name}") 
     
     session.close()
