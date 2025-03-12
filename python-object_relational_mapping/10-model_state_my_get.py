@@ -23,10 +23,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name == state_name)
+    state = session.query(State).filter(State.name == state_name).first()
     # state = session.query(State).get({"name":f"{state_name}"})
     if state:
-        print(f"{state.id}")
+        print(state.id)
     else: 
         print("Not found")
 
