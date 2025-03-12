@@ -14,6 +14,7 @@ from model_state import Base
 #  No need cause im already importing Base from model_state
 #  Base = declarative_base()
 
+
 class City(Base):
     """City class that links to the MySQL table `cities`."""
     __tablename__ = 'cities'
