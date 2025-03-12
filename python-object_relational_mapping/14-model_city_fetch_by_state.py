@@ -27,6 +27,6 @@ if __name__ == "__main__":
 
     for city in cities:
         print(city)
-        print(f"{State.name}{city.id} {city.name}") 
+        print(f"({city.id}) {city.name}") 
     
     session.close()
