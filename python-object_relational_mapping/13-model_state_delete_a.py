@@ -25,9 +25,9 @@ if __name__ == "__main__":
     states = session.query(State)\
         .filter(State.name.like("%a%")).all()
     print(f"Deleting {len(states)} states")
-    
+
     for state in states:
         session.delete(state)
-    
+
     session.commit()
     session.close()
