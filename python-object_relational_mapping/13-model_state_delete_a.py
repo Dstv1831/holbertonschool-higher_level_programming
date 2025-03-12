@@ -23,6 +23,6 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State)\
-        .filter(State.name.like("%a%"))._order_by(State.id).all()
+        .filter(State.name.like("%a")).all()
     session.delete(states)
     session.close()
