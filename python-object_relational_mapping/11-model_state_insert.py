@@ -22,15 +22,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    louis = State(name = "Lousiana", id = 6 )
+    louis = State(name = "Lousiana")
     session.add(louis)
     session.commit()
     
-    states = session.query(State).all()
-    
-    for state in states:
-        print(f"{state.id}:{state.name}")
-    else:
-        print("Not found")
-
     session.close()
