@@ -27,10 +27,10 @@ def generate_invitations (template, attendees):
             for key, value in att.items():
                 if value is None:
                     att[key] = 'N/A'
-            new_template = template.replace("{name}", att['name'])\
-                        .replace("{event_title}", att['event_title'])\
-                        .replace("{event_date}", att['event_date'])\
-                        .replace("{event_location}", att['event_location'])
+            new_template = template.replace("{name}", att.get('name'))\
+                        .replace("{event_title}", att.get('event_title'))\
+                        .replace("{event_date}", att.get('event_date'))\
+                        .replace("{event_location}", att.get('event_location'))
             with open(f'output_{attendees.index(att)}', 'w') as invitation:
                 invitation.write(new_template)
     except (TypeError, ValueError) as e:
