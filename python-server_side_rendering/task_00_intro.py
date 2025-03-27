@@ -12,19 +12,28 @@ with open('template.txt', 'r') as file:
     template_content = file.read()
 
 def generate_invitations (template, attendees):
-    if isinstance(template, str) or isinstance(attendees, list):
-        if template and attendees:
-            for att in attendees:
-                template.replace("{name}", att['name'])
-                template.replace("{event_title}", att['event_title'])
-                template.replace("{event_date}", att['event_date'])
-                template.replace("{event_location}", att['event_location'])
-                with open(f'output_{attendees.index(att)}', 'w') as invitation:
-                    invitation.write(template)
-        else:
-            raise Exception("Either template or attendees are empty")
-    else:
-        TypeError("template must be a String and attendees must be a List")
-        return
+    try:
+        if not isinstance(template, str):
+            raise TypeError("template must be a string")
+        if not isinstance(attendees, list):
+            raise TypeError("attendees must be a list")
+        if not all(isinstance(items, dict) for items in attendees):
+            raise TypeError("items on the attendees must be dictionaries")
+        if not template:
+            raise ValueError("Template is empty, no output files generated")
+        if not attendees:
+            raise ValueError("No data provided, no output files generated")
+        for att in attendees:
+            for key, value in att.items():
+                if value is None:
+                    att[key] = 'N/A'
+            new_template = template.replace("{name}", att['name'])\
+                        .replace("{event_title}", att['event_title'])\
+                        .replace("{event_date}", att['event_date'])\
+                        .replace("{event_location}", att['event_location'])
+            with open(f'output_{attendees.index(att)}', 'w') as invitation:
+                invitation.write(new_template)
+    except (TypeError, ValueError) as e:
+        print (f"Error: {e}")
     
 generate_invitations(template_content, attendees)
