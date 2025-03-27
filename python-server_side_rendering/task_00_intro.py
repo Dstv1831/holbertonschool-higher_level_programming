@@ -31,7 +31,8 @@ def generate_invitations(template, attendees):
             
             file_name = f'output_{i}.txt'
             if os.path.exists(file_name):
-                return print("the file already exists")
+                print(f"Skipping {file_name}, alredy exist")
+                continue
             else:
                 with open(file_name, 'w') as invitation:
                     invitation.write(new_template)
