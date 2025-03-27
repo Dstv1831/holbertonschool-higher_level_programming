@@ -1,6 +1,6 @@
 import os
 
-file_path='/DSTV/holbertonschool-higher_level_programming/python-server_side_rendering/template.txt'
+file_path='/DSTV/holbertonschool-higher_level_programming/python-server_side_rendering/output_'
 
 # attendees = [
 #     {"name": "Alice", "event_title": "Python Conference", "event_date": "2023-07-15", "event_location": "New York"},
@@ -30,6 +30,8 @@ def generate_invitations (template, attendees):
                         .replace("{event_title}", att.get('event_title', 'N/A'))\
                         .replace("{event_date}", att.get('event_date', 'N/A'))\
                         .replace("{event_location}", att.get('event_location', 'N/A'))
+            if os.path.exists(file_path + '{i}.txt'):
+                return print("the file already exists")
             with open(f'output_{i}', 'w') as invitation:
                 invitation.write(new_template)
     except (TypeError, ValueError) as e:
