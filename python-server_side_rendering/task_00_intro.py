@@ -11,6 +11,8 @@ file_path='/DSTV/holbertonschool-higher_level_programming/python-server_side_ren
 # with open('template.txt', 'r') as file:
 #     template_content = file.read()
 
+# VERY IMPORTANT USE OF .ITEMS() .GET() AND ENUMERATE() ON DICTIONARIES
+
 def generate_invitations (template, attendees):
     try:
         if not isinstance(template, str):
@@ -23,15 +25,14 @@ def generate_invitations (template, attendees):
             raise ValueError("Template is empty, no output files generated")
         if not attendees:
             raise ValueError("No data provided, no output files generated")
-        for att in attendees:
-            for key, value in att.items():
-                if value is None:
-                    att[key] = 'N/A'
-            new_template = template.replace("{name}", att.get('name'))\
-                        .replace("{event_title}", att.get('event_title'))\
-                        .replace("{event_date}", att.get('event_date'))\
-                        .replace("{event_location}", att.get('event_location'))
-            with open(f'output_{attendees.index(att)}', 'w') as invitation:
+        for i, att in enumerate(attendees):
+            new_template = template.replace("{name}", att.get('name', 'N/A'))\
+                        .replace("{event_title}", att.get('event_title', 'N/A'))\
+                        .replace("{event_date}", att.get('event_date', 'N/A'))\
+                        .replace("{event_location}", att.get('event_location', 'N/A'))
+            with open(f'output_{i}', 'w') as invitation:
                 invitation.write(new_template)
     except (TypeError, ValueError) as e:
         print (f"Error: {e}")
+
+    
