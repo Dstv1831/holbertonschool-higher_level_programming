@@ -33,9 +33,8 @@ def generate_invitations(template, attendees):
             if os.path.exists(file_name):
                 print(f"Skipping {file_name}, alredy exist")
                 continue
-            else:
-                with open(file_name, 'w') as invitation:
-                    invitation.write(new_template)
+            with open(file_name, 'w') as invitation:
+                invitation.write(new_template)
     except (TypeError, ValueError) as e:
         print (f"Error: {e}")
 
