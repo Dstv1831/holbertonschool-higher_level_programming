@@ -1,16 +1,10 @@
 <header>
     <h1>My Flask App</h1>
     <nav>
-        <section>
-            <a href="{{ url_for('home') }}">HOME</a>
-        </section>
-        
-        <section>
-            <a href="{{ url_for('about') }}">ABOUT</a>
-        </section>
-        
-        <section>
-            <a href="{{ url_for('contact') }}">CONTACT</a>
-        </section>
+        <ul>
+            <li><a href="{{ url_for('home') }}">HOME</a></li>        
+            <li><a href="{{ url_for('about') }}">ABOUT</a></li>        
+            <li><a href="{{ url_for('contact') }}">CONTACT</a></li>        
+        </ul>        
     </nav>
 </header>
