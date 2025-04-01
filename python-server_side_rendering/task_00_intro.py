@@ -23,7 +23,8 @@ def generate_invitations(template, attendees):
             raise ValueError("Template is empty, no output files generated")
         if not attendees:
             raise ValueError("No data provided, no output files generated")
-        for i, att in enumerate(attendees):
+       
+        for i, att in enumerate(attendees, start=1):
             new_template = template.replace("{name}", str(att.get('name', 'N/A')))\
                         .replace("{event_title}", str(att.get('event_title', 'N/A')))\
                         .replace("{event_date}", str(att.get('event_date', 'N/A')))\
