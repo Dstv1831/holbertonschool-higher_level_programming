@@ -31,7 +31,7 @@ def products():
 
     if not query :
         data = []
-    elif query == "JSON":
+    elif query == "json":
         with open("products.json") as json_products:
             data = json.load(json_products)
     elif query == "csv":
@@ -42,8 +42,7 @@ def products():
     
     if id:
         data =[item for item in data if item.get('id') == id ]
-    print(data)
-    return render_template('product_display.html', products = data)
+    return render_template('product_display.html', products = data), 200
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
