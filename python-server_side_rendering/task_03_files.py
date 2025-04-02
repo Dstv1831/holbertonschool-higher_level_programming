@@ -31,7 +31,7 @@ def products():
 
     if not query :
         data = []
-    elif query == "json":
+    elif query == "JSON":
         with open("products.json") as json_products:
             data = json.load(json_products)
     elif query == "csv":
