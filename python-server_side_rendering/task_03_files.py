@@ -23,7 +23,7 @@ def items():
 
     return render_template('items.html', json_data = data)
 
-@app.route('/product')
+@app.route('/products')
 def products():
 
     query = request.args.get('source')
@@ -34,14 +34,12 @@ def products():
     elif query == "json":
         with open("products.json") as json_products:
             data = json.load(json_products)
-            print(data)
     elif query == "csv":
         with open("products.csv") as csv_products:
             data = list(csv.DictReader(csv_products))
-            print(data)
     else:
         data = "error 1"
-    
+
     if id:
         data =[item for item in data if int(item['id']) == id ]
     return render_template('product_display.html', products = data), 200
