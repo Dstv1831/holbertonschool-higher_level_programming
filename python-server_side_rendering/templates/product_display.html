@@ -7,25 +7,30 @@
 </head>
 <body>
     {% include "header.html" %}
-    <table>
-        <caption>Product Display</caption>
-        <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
 
-    </table>
+    {% if not products %}
+    <h1>Products not found</h1>
+    {% elif products == "error 1" %}
+    <h1>Wrong Source</h1>
+    {% elif products == "error 2" %}
+    <h1>Product not found</h1>
+    {% else%}
+        <table>
+            <caption>Product Display</caption>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+            {% for items in products %}
+            <tr>
+                <td>{{items.get('name')}}</td>
+                <td>{{items.get('category')}}</td>
+                <td>{{items.get('price')}}</td>
+            </tr>
+            {% endfor %}
+        </table> 
+    {% endif %}
     {% include "footer.html" %}
 </body>
 </html>
