@@ -8,10 +8,15 @@
 <body>
     {% include "header.html" %}
     <ul>
-        {% for items in json_data %}
-        <!-- {% if not items: %}> -->
-         <li>{{items}}</li>
-        {% endfor %}
+        {% if json_data.get("items") %}
+            {% for val in json_data["items"] %}
+                <li>{{val}}</li>
+            {% endfor %}
+        {% else %}
+            <h1>No items found</h1>
+        {% endif %}
+
+
     </ul>
     {% include "footer.html" %}
 </body>

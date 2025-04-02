@@ -20,12 +20,9 @@ def items():
 
     with open("items.json") as json_file:
         data = json.load(json_file)
+        # print(type(data.values()))
 
     return render_template('items.html', json_data = data)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
-
-    # // "experiment_1": [],
-    # // "experiment_2": ["",""],
-    # // "experiment_3": [123, 30.5, true]
