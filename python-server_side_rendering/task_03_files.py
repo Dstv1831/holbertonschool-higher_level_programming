@@ -27,21 +27,23 @@ def items():
 def products():
 
     query = request.args.get('source')
-    id = request.args.get('id')
+    id = request.args.get('id', type=int)
 
     if not query :
         data = []
     elif query == "json":
         with open("products.json") as json_products:
             data = json.load(json_products)
+            print(data)
     elif query == "csv":
         with open("products.csv") as csv_products:
             data = list(csv.DictReader(csv_products))
+            print(data)
     else:
         data = "error 1"
     
     if id:
-        data =[item for item in data if item.get('id') == id ]
+        data =[item for item in data if int(item['id']) == id ]
     return render_template('product_display.html', products = data), 200
 
 if __name__ == '__main__':
