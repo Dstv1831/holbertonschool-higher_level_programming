@@ -38,7 +38,7 @@ def products():
         with open("products.csv") as csv_products:
             data = list(csv.DictReader(csv_products))
     else:
-        data = "Wrong Source"
+        data = "error 1"
     
     if id:
         data =[item for item in data if item.get('id') == id ]
