@@ -7,22 +7,27 @@ app = Flask(__name__)
 def load_from_csv():
     with open("products.csv") as csv_products:
         data = list(csv.DictReader(csv_products))
+        print(data)
     return data
             
-
 def load_from_json():
     with open("products.json") as json_products:
         data = json.load(json_products)
+        print(data)
     return data
 
 def load_from_db():
     conn = sqlite3.connect('products.db')
+    # Set the rows to be returned as dictionaries instead of tuples (default)
+    conn.row_factory = sqlite3.Row 
     cursor = conn.cursor()
-    cursor.execute('SELECT id, name, category price FROM Products')
+    cursor.execute('SELECT id, name, category, price FROM Products')
     rows = cursor.fetchall()
-    print(rows)
-    conn.close
-    return rows
+    # Creating a list of dictionaries for each row
+    data = [dict(row) for row in rows]
+    print(data)
+    conn.close()
+    return data
 
 
 @app.route('/')
@@ -54,11 +59,11 @@ def products():
     if not query :
         data = []
     elif query == "json":
-        load_from_json()
+        data = load_from_json()
     elif query == "csv":
-        load_from_csv()
+        data = load_from_csv()
     elif query == "sql":
-        load_from_db()
+        data = load_from_db()
     else:
         data = "error 1"
 
